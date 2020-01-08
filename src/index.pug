@@ -7,10 +7,14 @@ html
       name="description"
       content="Welcome to the playground, here you can sharpen your understanding of the mighty Magic JSON"
     )
+    link(rel="stylesheet", href="style.css")
   body
     h1 Welcome to the playground
     p here you can sharpen your understanding of the mighty Magic JSON
     h2 User project examples
     nav
       each project in data.project
-        a(href=`${project.username}`)=project.title
+        a.link(href=`${project.username}`)=project.title
+
+    div
+      include:markdown-it ../README.md
