@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    title Play with Array and Objects
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(
+      name="description"
+      content="Welcome to the playground, here you can sharpen your understanding of the mighty Magic JSON"
+    )
+  body
+    h1 Welcome to the playground
+    p here you can sharpen your understanding of the mighty Magic JSON
+    h2 User project examples
+    nav
+      each project in data.project
+        a(href=`${project.username}`)=project.title
