@@ -1,0 +1,32 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        meta(
+            name="description"
+            content="Solving the Collection-playground Challenge "
+        )
+        link(rel="stylesheet", href="index.css")
+        title Collection-Playground
+    body
+        .container
+            h1.user-title Check User List
+            ul.user-list
+                each user in data.sample
+                    li.user-profile
+                        img.user-avatar(src=user.picture, alt="something went wrong")
+                        h2 #{user.firstName}
+                    .user-profle
+                        .user-description
+                            input(type="radio", name="same-name" id="id-description")
+                            label(for="id-description") Show
+                            p #{user.about}
+                        .user-skill
+                            h3 #{user.skills}
+                        .user-education
+                            h3 #{user.education}
+                        .contact
+                            p #{user.email}
+
